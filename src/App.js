@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { createContext, useState } from "react";
+import Navbar from "./components/Navbar";
+import ProductsList from "./components/ProductsList";
+import ProductsProvider from "./context/ProductsContext";
+import Card from "./components/Card";
+// export const ProductsContext = createContext();
 
 function App() {
+  // const [products, setproducts] = useState([
+  //   { id: 1, name: "John" },
+  //   { id: 2, name: "muhammed" },
+  //   { id: 3, name: "ahmed" },
+  // ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ProductsContext.Provider value={products}> */}
+      {/* <ProductsProvider> */}
+        <Navbar />
+        <ProductsList />
+        <Card>
+
+        </Card>
+          <Card.Title/>
+        {/* </ProductsContext.Provider> */}
+      {/* </ProductsProvider> */}
     </div>
   );
 }
